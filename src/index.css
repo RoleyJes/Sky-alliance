@@ -1,0 +1,85 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Leafleft style */
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #0f1219;
+}
+
+.testimonial-scrollbar::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.activeFeed {
+  border-radius: 1.875rem;
+  background: #c108f1;
+}
+.activeFeedContent {
+  display: block;
+}
+
+@keyframes lslide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rslide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.leftSlide {
+  animation: 20s lslide infinite linear;
+  width: max-content;
+}
+.rightSlide {
+  animation: 20s rslide infinite linear;
+  width: max-content;
+}
+
+.react-calendar__tile {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.react-calendar__tile--active {
+  background-color: #c108f1;
+  color: white;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+}
+
+abbr:where([title]) {
+  text-decoration: none;
+}
+
+.react-calendar__navigation {
+  margin-block-end: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
