@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface BlogCardProps {
   id?: number;
@@ -54,12 +55,12 @@ export default function BlogCards({
             {description}
           </p>
 
-          <a
-            href="#"
+          <Link
+            to="/blog-post"
             className={`flex items-center gap-2 mt-[0.75rem] md:mt-[1.69rem] text-[rgba(255,255,255,0.82)] text-[1.1875rem] w-fit transition-colors duration-75 hover:text-pink ${linkClass}`}>
             <span className="">{link}</span>
             {arrow && <img src={arrow} alt="" />}
-          </a>
+          </Link>
         </div>
       </li>
     </div>
