@@ -56,7 +56,12 @@ export default function Team() {
         {/* Cards */}
         <ul className="grid place-items-center 2xl:place-items-start grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-y-[4.6rem] md:gap-y-[6.44rem] md:gap-x-[3.12rem]">
           {teams.map((item) => (
-            <TeamCard img={item.img} name={item.name} role={item.role} />
+            <TeamCard
+              key={item.id}
+              img={item.img}
+              name={item.name}
+              role={item.role}
+            />
           ))}
         </ul>
       </div>

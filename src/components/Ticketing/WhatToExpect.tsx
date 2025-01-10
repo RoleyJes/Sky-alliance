@@ -38,7 +38,7 @@ export default function WhatToExpect() {
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[3.12rem]">
           {cardSections.map((card) => (
-            <BlogCards {...card} />
+            <BlogCards key={card.id} {...card} />
           ))}
         </ul>
       </div>

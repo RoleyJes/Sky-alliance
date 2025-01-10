@@ -60,7 +60,6 @@ const yearsList = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
 
 export default function Hero() {
   const [clickedYear, setClickedYear] = useState(2018);
-  console.log(clickedYear);
 
   const handleSlides = (year: number) => {
     setClickedYear(year);

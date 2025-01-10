@@ -15,7 +15,7 @@ export default function Footer() {
           </picture>
 
           <p className="text-[rgba(255,255,255,0.87)] text-[0.5rem] lg:text-[0.6875rem] leading-[0.97rem]">
-            © {year} sky Alliance partner | All Rights Reserved 
+            Built with ❤ by Jessica | {year}
           </p>
         </div>
       </section>

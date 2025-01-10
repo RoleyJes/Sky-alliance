@@ -55,9 +55,9 @@ export default function EventsList() {
         <p className="text-xl md:text-4xl font-bold text-neutral100">
           January 02 2024
         </p>
-        <button className="bg-pink text-white px-4 py-2 rounded-md shadow-lg">
+        {/* <button className="bg-pink text-white px-4 py-2 rounded-md shadow-lg">
           View Calendar
-        </button>
+        </button> */}
       </div>
 
       {/* Calendar Section */}

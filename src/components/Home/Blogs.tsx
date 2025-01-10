@@ -69,7 +69,7 @@ export default function Blogs() {
           <div className="max-w-[1314px]">
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[3.12rem]">
               {bodySections.map((item) => (
-                <BlogCards {...item} />
+                <BlogCards key={item.id} {...item} />
               ))}
             </ul>
           </div>

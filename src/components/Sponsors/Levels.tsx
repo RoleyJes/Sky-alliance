@@ -200,10 +200,10 @@ export default function Levels() {
     <>
       {sponsorshipLevels.map((level) => (
         <article
+          key={level.id}
           data-aos="zoom-in"
           className={`rounded-[1.25rem] border border-[rgba(60,60,60,0.37)] shadow-[0px_0px_40px_5px_rgba(0,0,0,0.04)] bg-darkGrey hover:bg-gradient-to-r from-[#C108F1] from-[-2.52%] via-[#6825D7] via-[28.25%] to-[#C108F1] to-[102.92%] p-px`}>
           <div
-            key={level.id}
             className={`bg-${level.bgColor} rounded-[1.25rem] pt-[4.27rem] pb-[2.16rem] px-[3.05rem] md:pt-[5.06rem] md:pb-[2.56rem] md:px-[3.62rem] hover:bg-${level.bgColor} text-neutral100`}>
             <p className="font-bold text-4xl md:text-5xl">{level.price}</p>
             <p className="mb-[3.37rem] lg:mb-16 font-bold text-xl md:text-2xl">

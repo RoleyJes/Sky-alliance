@@ -7,6 +7,7 @@ import location from "../../assets/Home/location.svg";
 import arrow from "../../assets/Home/Arrow_Right_LG.svg";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const houses = [
   {
@@ -135,11 +136,11 @@ export default function Accommodation() {
                       </span>
                       <span className="text-grey300">/night</span>
                     </p>
-                    <a
-                      href="#"
+                    <Link
+                      to="/attendees"
                       className="flex flex-grow items-center gap-2 text-xs md:text-base text-pink me-0 justify-end mt-[0.71rem] md:mt-[1.66rem] transition-all duration-300 hover:text-white">
                       Get apartment <img src={arrow} alt="" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

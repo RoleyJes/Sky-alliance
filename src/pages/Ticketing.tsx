@@ -31,7 +31,9 @@ export default function Ticketing() {
         <Ticket modal={modal} onOpen={handleOpen} onClose={handleClose} />
         <Faq />
         <LastEventVideos />
-        <ImagesFromLastEvent />
+        <div className="hidden xl:block">
+          <ImagesFromLastEvent />
+        </div>
       </main>
 
       <Footer />

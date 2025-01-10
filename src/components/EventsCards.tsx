@@ -90,10 +90,8 @@ export default function EventsCards() {
     <div className="max-w-[1314px]">
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[50px]">
         {cards.map((item) => (
-          <div data-aos="fade-up">
-            <li
-              key={item.id}
-              className="bg-[rgba(255,255,255,0.06)] rounded-[1.25rem] backdrop-blur-[200px py-[1.62rem] transition-all duration-300 hover:shadow-md hover:shadow-pink">
+          <div data-aos="fade-up" key={item.id}>
+            <li className="bg-[rgba(255,255,255,0.06)] rounded-[1.25rem] backdrop-blur-[200px py-[1.62rem] transition-all duration-300 hover:shadow-md hover:shadow-pink">
               <div className="px-[1.18rem] mb-4">
                 <figure className="">
                   <img src={item.img} alt="BodyImageCardOne" />

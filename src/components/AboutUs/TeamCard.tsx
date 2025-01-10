@@ -1,12 +1,13 @@
 type TeamCardPropType = {
-  img: string;
-  name: string;
-  role: string;
+  id?: number;
+  img?: string;
+  name?: string;
+  role?: string;
 };
 
-export default function TeamCard({ img, name, role }: TeamCardPropType) {
+export default function TeamCard({ id, img, name, role }: TeamCardPropType) {
   return (
-    <li className="relative">
+    <li className="relative" key={id}>
       <figure className="w-[20.68rem] h-[18.79rem] md:w-[19rem] lg:w-[25.31rem] lg:h-[23rem] rounded-[1.02rem] lg:rounded-[1.25rem] overflow-hidden">
         <img src={img} className="size-full object-cover" alt="" />
       </figure>

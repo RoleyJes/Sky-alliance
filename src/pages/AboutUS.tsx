@@ -5,6 +5,7 @@ import glasses from "../assets/AboutUs/glasses.svg";
 import SubHero from "../components/SubHero";
 import Team from "../components/AboutUs/Team";
 import ImagesFromLastEvent from "../components/AboutUs/ImagesFromLastEvent";
+import Footer from "../components/Footer";
 
 const subHeroContent = [
   {
@@ -28,14 +29,14 @@ const subHeroContent = [
 
 export default function AboutUS() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <section className="text-white px-4 py-[4.3125rem] md:px-[4rem] xl:pt-[9.31rem] xl:pb-[5.59rem] xl:px-[6.13rem]">
-        <div className="max-w-[82.125rem] mx-auto">
-          <div className="flex flex-col gap-y-[2.91rem] md:gap-y-[3.12rem]">
-            {subHeroContent.map((item) => (
-              <>
+    <>
+      <main>
+        <Navbar />
+        <Hero />
+        <section className="text-white px-4 py-[4.3125rem] md:px-[4rem] xl:pt-[9.31rem] xl:pb-[5.59rem] xl:px-[6.13rem]">
+          <div className="max-w-[82.125rem] mx-auto">
+            <div className="flex flex-col gap-y-[2.91rem] md:gap-y-[3.12rem]">
+              {subHeroContent.map((item) => (
                 <SubHero
                   key={item.id}
                   title={item.title}
@@ -45,13 +46,16 @@ export default function AboutUS() {
                   img={item.img}
                   orderFirst={item.orderFirst}
                 />
-              </>
-            ))}
+              ))}
+            </div>
           </div>
+        </section>
+        <Team />
+        <div className="hidden xl:block">
+          <ImagesFromLastEvent />
         </div>
-      </section>
-      <Team />
-      <ImagesFromLastEvent />
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
