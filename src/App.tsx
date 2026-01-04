@@ -3,7 +3,7 @@ import Aos from "aos";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
-import ComingSoon from "./pages/ComingSoon";
+// import ComingSoon from "./pages/ComingSoon";
 import AboutUS from "./pages/AboutUS";
 import Attendees from "./pages/Attendees";
 import Sponsors from "./pages/Sponsors";
@@ -14,13 +14,15 @@ import Ticketing from "./pages/Ticketing";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import ErrorPage from "./components/ErrorPage";
+import RootLayout from "./components/RootLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "/coming-soon", element: <ComingSoon /> },
+      // { path: "/coming-soon", element: <ComingSoon /> },
       { path: "/about-us", element: <AboutUS /> },
       { path: "/attendees", element: <Attendees /> },
       { path: "/sponsors", element: <Sponsors /> },

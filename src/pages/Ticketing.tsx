@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Faq from "../components/Attendees/Faq";
 import Ticket from "../components/Attendees/Ticket";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Ticketing/Hero";
 import Speakers from "../components/Ticketing/Speakers";
 import WhatToExpect from "../components/Ticketing/WhatToExpect";
@@ -22,21 +20,15 @@ export default function Ticketing() {
 
   return (
     <>
-      <Navbar />
-
-      <main>
-        <Hero onOpen={handleOpen} />
-        <WhatToExpect />
-        <Speakers />
-        <Ticket modal={modal} onOpen={handleOpen} onClose={handleClose} />
-        <Faq />
-        <LastEventVideos />
-        <div className="hidden xl:block">
-          <ImagesFromLastEvent />
-        </div>
-      </main>
-
-      <Footer />
+      <Hero onOpen={handleOpen} />
+      <WhatToExpect />
+      <Speakers />
+      <Ticket modal={modal} onOpen={handleOpen} onClose={handleClose} />
+      <Faq />
+      <LastEventVideos />
+      <div className="hidden xl:block">
+        <ImagesFromLastEvent />
+      </div>
     </>
   );
 }
