@@ -5,6 +5,7 @@ import Hamburger from "../assets/navbar/Hamburger.svg";
 import { useLocation, Link } from "react-router-dom";
 // import NavBtn from "./NavBtn";
 import { RouteNavs } from "../constants/route-nav-enum";
+import NavBtn from "./NavBtn";
 
 const Navbar = () => {
   const [navbarBgColor, setNavbarBgColor] = useState(false);
@@ -48,8 +49,8 @@ const Navbar = () => {
                 </li>
               ))}
 
-              {/* <NavBtn href={RouteNavs.Register} text="Register Now" /> */}
-              <Link to={RouteNavs.Register}>Register Now</Link>
+              <NavBtn href={RouteNavs.Register} text="Register Now" />
+              {/* <Link to={RouteNavs.Register}>Register Now</Link> */}
             </ul>
 
             {/* Mobile */}
@@ -70,8 +71,8 @@ const Navbar = () => {
                       <Link to={item.href}>{item.label}</Link>
                     </li>
                   ))}
-                  {/* <NavBtn href={RouteNavs.Register} text="Register Now" /> */}
-                  <Link to={RouteNavs.Register}>Register Now</Link>
+                  <NavBtn href={RouteNavs.Register} text="Register Now" />
+                  {/* <Link to={RouteNavs.Register}>Register Now</Link> */}
                 </ul>
               </div>
             )}
